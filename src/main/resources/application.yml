@@ -1,0 +1,39 @@
+management:
+  security:
+    enabled: false
+# Spring actuator
+  endpoints:
+    web:
+      exposure:
+      # Don't do this in production :)
+        include: "*"
+
+# DEMO Relax binding
+customer:
+  -
+    name: "Joe"
+    lastname: "Doe"
+    birthday: "1988-08-20"
+  -
+    name: "Mia"
+    lastname: "Beck"
+    birthday: "1970-12-30"
+  -
+    name: "Zue"
+    lastname: "Meier"
+    birthday: "1991-05-06"
+  -
+    name: "John"
+    lastname: "McClane"
+    birthday: "1968-11-13"
+  -
+    name: "Javier"
+    lastname: "Rodriguez-Rodriguez"
+    birthday: "2010-11-13"
+
+# DEMO Inject values
+demo:
+  inject:
+   booleanVal: true
+   intVal: 4711
+   stringVal: "Hello World"
